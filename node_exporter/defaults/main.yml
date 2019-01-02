@@ -1,0 +1,9 @@
+---
+
+node_exporter_state: 'enable'
+
+node_exporter_checksum_algorithm: 'sha256'
+
+node_exporter_checksum: 'd2e00d805dbfdc67e7291ce2d2ff151f758dd7401dd993411ff3818d0e231489'
+
+node_exporter_version: '0.17.0'
