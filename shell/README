@@ -61,7 +61,7 @@ ROLE
 
   shell_color_prompt
     Description: Control the 'shell_color_prompt' option.
-    Implemented: 0.2
+    Implemented: 0.1
     Required   : False
     Value      : Predetermined
     Type       : String
@@ -116,7 +116,7 @@ ROLE
 
   shell_https_proxy
     Description: Define the 'shell_https_proxy' option.
-    Implemented: 0.5
+    Implemented: 0.1
     Required   : False
     Value      : Arbitrary
     Type       : String
@@ -138,7 +138,7 @@ ROLE
 
   shell_no_proxy
     Description: Define the 'shell_no_proxy' option.
-    Implemented: 0.6
+    Implemented: 0.1
     Required   : False
     Value      : Arbitrary
     Type       : Array
