@@ -1,0 +1,19 @@
+---
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+# timesyncd.conf
+file_src_timesyncd_conf: 'templates/main/timesyncd.conf.j2'
+file_dst_timesyncd_conf: '/etc/systemd/timesyncd.conf'
+file_mode_timesyncd_conf: '0644'
+file_owner_timesyncd_conf: 'root'
+file_group_timesyncd_conf: 'root'
+
+#-------------------------------------------------------------------------------
+# SYSTEM
+#-------------------------------------------------------------------------------
+
+# systemd-timesyncd
+service_name_systemd_timesyncd: 'systemd-timesyncd'
