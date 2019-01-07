@@ -65,17 +65,6 @@ ROLE
       Disable : 'stop' | 'off' | 'disable'
       Inactive: 'quiesce' | 'inactive'
 
-  systemd_timesyncd_server
-    Description: Define the 'systemd_timesyncd_server' option.
-    Implemented: 0.1
-    Required   : False
-    Value      : Arbitrary
-    Type       : Array
-    Default    : ["ntp.{{ansible_domain}}"]
-    Options    :
-      Examples: ['162.23.41.55', '162.23.41.56', '162.23.41.10', '192.33.96.101', '192.33.96.102']
-      None    : []
-
   systemd_timesyncd_fallback
     Description: Define the 'systemd_timesyncd_fallback' option.
     Implemented: 0.1
@@ -83,6 +72,17 @@ ROLE
     Value      : Arbitrary
     Type       : Array
     Default    : []
+    Options    :
+      Examples: ['162.23.41.55', '162.23.41.56', '162.23.41.10', '192.33.96.101', '192.33.96.102']
+      None    : []
+
+  systemd_timesyncd_server
+    Description: Define the 'systemd_timesyncd_server' option.
+    Implemented: 0.1
+    Required   : False
+    Value      : Arbitrary
+    Type       : Array
+    Default    : ["ntp.{{ansible_domain}}"]
     Options    :
       Examples: ['162.23.41.55', '162.23.41.56', '162.23.41.10', '192.33.96.101', '192.33.96.102']
       None    : []
