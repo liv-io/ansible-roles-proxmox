@@ -14,5 +14,8 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.1.1 (2019-01-07)
+E: Change POSIX permissions for 'textfile_collector' directory
+
 * Version 0.1.0 (2019-01-02)
 F: Initial release
