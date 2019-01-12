@@ -1,0 +1,10 @@
+---
+
+auditd_state: 'enable'
+
+auditd_config_all:
+  - {state: 'true', name: 'audit', config: [{rule: '-D', comment: 'First rule - delete all'}, {rule: '-b 8192', comment: 'Increase the buffers to survive stress events.'}, {rule: '-f 1', comment: 'Set failure mode to syslog'}]}
+
+auditd_config_group: []
+
+auditd_config_host: []
