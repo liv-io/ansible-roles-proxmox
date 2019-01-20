@@ -1,0 +1,50 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_major_version}}.yml"
+      - 'vars/main.yml'
+      skip: 'true'
+  tags:
+    - enable
+    - zfs
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+- name: 'cron create zfs_check-pools'
+  cron:
+    state: 'present'
+    disabled: "{{'yes' if (zfs_check_pools_state is match('false|no|disable')) else 'no'}}"
+    name: "{{cron_name_zfs_check_pools}}"
+    cron_file: "{{cron_cron_file_zfs_check_pools}}"
+    minute: "{{cron_minute_zfs_check_pools}}"
+    user: "{{cron_user_zfs_check_pools}}"
+    job: "{{cron_job_zfs_check_pools}}"
+  tags:
+    - enable
+    - zfs
+
+- name: 'cron create zfs_scrub-pools'
+  cron:
+    state: 'present'
+    disabled: "{{'yes' if (zfs_scrub_pools_state is match('false|no|disable')) else 'no'}}"
+    name: "{{cron_name_zfs_scrub_pools}}"
+    cron_file: "{{cron_cron_file_zfs_scrub_pools}}"
+    day: "{{cron_day_zfs_scrub_pools}}"
+    hour: "{{cron_hour_zfs_scrub_pools}}"
+    minute: "{{cron_minute_zfs_scrub_pools}}"
+    month: "{{cron_month_zfs_scrub_pools}}"
+    weekday: "{{cron_weekday_zfs_scrub_pools}}"
+    user: "{{cron_user_zfs_scrub_pools}}"
+    job: "{{cron_job_zfs_scrub_pools}}"
+  tags:
+    - enable
+    - zfs

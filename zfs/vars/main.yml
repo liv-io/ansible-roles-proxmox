@@ -1,0 +1,43 @@
+---
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+# zfs_script.dir
+file_dst_zfs_script_dir: "/{{common_script_dir}}/zfs"
+file_mode_zfs_script_dir: '0755'
+file_owner_zfs_script_dir: 'root'
+file_group_zfs_script_dir: 'root'
+
+# zfs_check-pools.sh
+file_src_zfs_check_pools_sh: 'templates/main/zfs_check-pools.sh.j2'
+file_dst_zfs_check_pools_sh: "{{file_dst_zfs_script_dir}}/zfs_check-pools.sh"
+file_mode_zfs_check_pools_sh: '0754'
+file_owner_zfs_check_pools_sh: 'root'
+file_group_zfs_check_pools_sh: 'root'
+
+# zfs_check-pools
+cron_name_zfs_check_pools: "zfs: Check Pools"
+cron_cron_file_zfs_check_pools: "zfs_check-pools"
+cron_minute_zfs_check_pools: "*/{% if ((zfs_check_pools_interval|int(10)) > 59) %}59{% elif ((zfs_check_pools_interval|int(10)) < 5) %}5{% else %}{{(zfs_check_pools_interval|int(10))}}{% endif %}"
+cron_user_zfs_check_pools: "{{file_owner_zfs_check_pools_sh}}"
+cron_job_zfs_check_pools: "{{file_dst_zfs_check_pools_sh}}"
+
+# zfs_scrub-pools.sh
+file_src_zfs_scrub_pools_sh: 'templates/main/zfs_scrub-pools.sh.j2'
+file_dst_zfs_scrub_pools_sh: "{{file_dst_zfs_script_dir}}/zfs_scrub-pools.sh"
+file_mode_zfs_scrub_pools_sh: '0754'
+file_owner_zfs_scrub_pools_sh: 'root'
+file_group_zfs_scrub_pools_sh: 'root'
+
+# zfs_scrub-pools
+cron_name_zfs_scrub_pools: 'zfs: Scrub Pools'
+cron_cron_file_zfs_scrub_pools: 'zfs_scrub-pools'
+cron_day_zfs_scrub_pools: "{{zfs_scrub_pools_day}}"
+cron_hour_zfs_scrub_pools: "{{zfs_scrub_pools_hour}}"
+cron_minute_zfs_scrub_pools: "{{zfs_scrub_pools_minute}}"
+cron_month_zfs_scrub_pools: "{{zfs_scrub_pools_month}}"
+cron_weekday_zfs_scrub_pools: "{{zfs_scrub_pools_weekday}}"
+cron_user_zfs_scrub_pools: "{{file_owner_zfs_scrub_pools_sh}}"
+cron_job_zfs_scrub_pools: "{{file_dst_zfs_scrub_pools_sh}}"

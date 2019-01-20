@@ -1,0 +1,53 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_major_version}}.yml"
+      - 'vars/main.yml'
+      skip: 'true'
+  tags:
+    - install
+    - zfs
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+- name: 'file create zfs_script.dir'
+  file:
+    state: 'directory'
+    path: "{{file_dst_zfs_script_dir}}"
+    mode: "{{file_mode_zfs_script_dir}}"
+    owner: "{{file_owner_zfs_script_dir}}"
+    group: "{{file_group_zfs_script_dir}}"
+  tags:
+    - install
+    - zfs
+
+- name: 'file create zfs_check-pools.sh'
+  template:
+    src: "{{file_src_zfs_check_pools_sh}}"
+    dest: "{{file_dst_zfs_check_pools_sh}}"
+    mode: "{{file_mode_zfs_check_pools_sh}}"
+    owner: "{{file_owner_zfs_check_pools_sh}}"
+    group: "{{file_group_zfs_check_pools_sh}}"
+  tags:
+    - install
+    - zfs
+
+- name: 'file create zfs_scrub-pools.sh'
+  template:
+    src: "{{file_src_zfs_scrub_pools_sh}}"
+    dest: "{{file_dst_zfs_scrub_pools_sh}}"
+    mode: "{{file_mode_zfs_scrub_pools_sh}}"
+    owner: "{{file_owner_zfs_scrub_pools_sh}}"
+    group: "{{file_group_zfs_scrub_pools_sh}}"
+  tags:
+    - install
+    - zfs

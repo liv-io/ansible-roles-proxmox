@@ -1,0 +1,46 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_major_version}}.yml"
+      - 'vars/main.yml'
+      skip: 'true'
+  tags:
+    - remove
+    - zfs
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+- name: 'cron remove zfs_check-pools'
+  cron:
+    state: 'absent'
+    name: "{{cron_name_zfs_check_pools}}"
+    cron_file: "{{cron_cron_file_zfs_check_pools}}"
+  tags:
+    - remove
+    - zfs
+
+- name: 'cron remove zfs_scrub-pools'
+  cron:
+    state: 'absent'
+    name: "{{cron_name_zfs_scrub_pools}}"
+    cron_file: "{{cron_cron_file_zfs_scrub_pools}}"
+  tags:
+    - remove
+    - zfs
+
+- name: 'file remove zfs_script.dir'
+  file:
+    state: 'absent'
+    path: "{{file_dst_zfs_script_dir}}"
+  tags:
+    - remove
+    - zfs
