@@ -14,5 +14,8 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.1.1 (2019-01-21)
+E: Improve script and reduce noise by removing echo command from alerting function
+
 * Version 0.1.0 (2019-01-20)
 F: Initial release
