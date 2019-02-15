@@ -14,5 +14,10 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.2.0 (2019-02-15)
+C: Redesign 'sudo_config_all' option (alter config variable to string)
+C: Redesign 'sudo_config_group' option (alter config variable to string)
+C: Redesign 'sudo_config_host' option (alter config variable to string)
+
 * Version 0.1.0 (2019-01-04)
 F: Initial release
