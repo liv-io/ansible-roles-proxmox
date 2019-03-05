@@ -1,0 +1,26 @@
+#-------------------------------------------------------------------------------
+#                             ANSIBLE MANAGED FILE
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# INFORMATION
+#-------------------------------------------------------------------------------
+#
+# Name   : apt.conf
+# Type   : apt configuration file
+# Role   : apt
+#
+# Authors: liv community
+# License: Simplified BSD License
+#
+#-------------------------------------------------------------------------------
+
+# HTTP Proxy
+{% if (apt_http_proxy|default('')) %}
+Acquire::http::proxy "{{apt_http_proxy}}";
+{% endif %}
+
+# HTTPS Proxy
+{% if (apt_https_proxy|default('')) %}
+Acquire::https::proxy "{{apt_https_proxy}}";
+{% endif %}

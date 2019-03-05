@@ -1,0 +1,25 @@
+---
+
+#-------------------------------------------------------------------------------
+# PACKAGING
+#-------------------------------------------------------------------------------
+
+# apt
+package_name_apt: 'apt'
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+# config
+file_src_config: 'templates/main/config.j2'
+file_mode_config: '0644'
+file_owner_config: 'root'
+file_group_config: 'root'
+
+# apt.conf
+file_src_apt_conf: 'templates/main/apt.conf.j2'
+file_dst_apt_conf: '/etc/apt/apt.conf'
+file_mode_apt_conf: '0644'
+file_owner_apt_conf: 'root'
+file_group_apt_conf: 'root'

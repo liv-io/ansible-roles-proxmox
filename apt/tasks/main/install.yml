@@ -1,0 +1,43 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_major_version}}.yml"
+      - 'vars/main.yml'
+      skip: 'true'
+  tags:
+    - install
+    - apt
+
+#-------------------------------------------------------------------------------
+# PACKAGING
+#-------------------------------------------------------------------------------
+
+- name: 'package install apt'
+  package:
+    state: 'present'
+    name: "{{package_name_apt}}"
+  tags:
+    - install
+    - apt
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+- name: 'file create apt.conf'
+  template:
+    src: "{{file_src_apt_conf}}"
+    dest: "{{file_dst_apt_conf}}"
+    mode: "{{file_mode_apt_conf}}"
+    owner: "{{file_owner_apt_conf}}"
+    group: "{{file_group_apt_conf}}"
+  tags:
+    - install
+    - apt
