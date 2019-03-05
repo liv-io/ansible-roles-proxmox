@@ -14,5 +14,8 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.1.1 (2019-03-05)
+B: Fix typo in variable name
+
 * Version 0.1.0 (2019-03-05)
 F: Initial release

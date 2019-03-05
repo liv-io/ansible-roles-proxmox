@@ -45,7 +45,7 @@
 
 - name: 'command create acl'
   shell: "pveum acl modify {{(item.path|default('/'))}} --groups {{(item.groups|default([])|join(','))}} --roles {{(item.roles|default(['PVEAuditor'])|join(','))}}"
-  register: register_ereate_acl
+  register: register_create_acl
   changed_when: (register_create_acl.rc > 0)
   check_mode: 'no'
   with_items: "{{pve_acl_config_all + pve_acl_config_group + pve_acl_config_host}}"
