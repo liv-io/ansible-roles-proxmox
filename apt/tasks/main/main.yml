@@ -11,3 +11,9 @@
   when: not (apt_state is match('false|no|remove|quiesce|inactive'))
   tags:
     - apt
+
+- name: 'task include remove'
+  import_tasks: remove.yml
+  when: (apt_state is match('false|no|remove'))
+  tags:
+    - apt

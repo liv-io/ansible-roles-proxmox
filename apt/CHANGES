@@ -14,5 +14,8 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.2.0 (2019-03-08)
+F: Add 'apt_check-update' script
+
 * Version 0.1.0 (2019-03-05)
 F: Initial release
