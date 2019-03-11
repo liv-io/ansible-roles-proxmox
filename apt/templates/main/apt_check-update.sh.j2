@@ -219,9 +219,12 @@ check_script_user
 
 create_lockfile
 
-# Check for pending updates
-packages=$(${apt_get} --quiet --simulate upgrade | ${grep} '^Inst ' | ${wc} -l)
+# Resynchronize package index files
+${apt_get} --quiet update > /dev/null 2>&1
+log_and_exit_on_error "$?" 'Error' 'Unable to resynchronize package index files.'
 
+# Check for pending updates
+packages=$(${apt_get} --quiet --simulate dist-upgrade | ${grep} '^Inst ' | ${wc} -l)
 log_and_exit_on_error "$?" 'Error' 'Unable to check for updates.'
 
 remove_lockfile
