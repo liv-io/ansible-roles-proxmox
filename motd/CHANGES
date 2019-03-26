@@ -14,8 +14,11 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.1.2 (2019-03-26)
+E: Extend processor information (sockets and cores)
+
 * Version 0.1.1 (2019-03-26)
-I: Improve processor information
+E: Improve processor information (cores instead of sockets)
 
 * Version 0.1.0 (2019-01-05)
 F: Initial release
