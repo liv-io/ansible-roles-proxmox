@@ -14,5 +14,8 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.1.1 (2019-04-15)
+E: Allow additional message authentication codes (OpenSSH client)
+
 * Version 0.1.0 (2019-01-07)
 F: Initial release
