@@ -14,6 +14,9 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.3.0 (2019-05-26)
+F: Port role to Ansible 2.8
+
 * Version 0.2.1 (2019-03-11)
 E: Execute 'update' before counting packages (resynchronize package index files)
 E: Use 'dist-upgrade' instead of 'upgrade' command
