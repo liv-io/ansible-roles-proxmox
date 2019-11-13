@@ -263,7 +263,7 @@ PACKAGES
   systemd
     Version: >= 219
     Name   :
-      Debian 9: 'systemd'
+      Debian 10: 'systemd'
 
 ROLES
 
@@ -305,7 +305,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
