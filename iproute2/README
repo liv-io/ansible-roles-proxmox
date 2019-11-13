@@ -67,7 +67,7 @@ PACKAGES
   iproute2
     Version: >= 3.10
     Name   :
-      Debian 9: 'iproute2'
+      Debian 10: 'iproute2'
 
 ROLES
 
@@ -109,7 +109,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
