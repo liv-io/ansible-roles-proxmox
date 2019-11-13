@@ -252,7 +252,7 @@ PACKAGES
   sudo
     Version: >= 1.8
     Name   :
-      Debian 9: 'sudo'
+      Debian 10: 'sudo'
 
 ROLES
 
@@ -294,7 +294,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
