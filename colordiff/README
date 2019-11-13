@@ -74,7 +74,7 @@ PACKAGES
   colordiff
     Version: >= 1.0
     Name   :
-      Debian 9: 'colordiff'
+      Debian 10: 'colordiff'
 
 ROLES
 
@@ -116,7 +116,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
