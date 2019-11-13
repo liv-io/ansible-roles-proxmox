@@ -138,7 +138,7 @@ PACKAGES
   hostname
     Version: >= 3.0
     Name   :
-      Debian 9: 'hostname'
+      Debian 10: 'hostname'
 
 ROLES
 
@@ -180,7 +180,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
