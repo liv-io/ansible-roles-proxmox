@@ -76,7 +76,7 @@ PACKAGES
   less
     Version: >= 436
     Name   :
-      Debian 9: 'less'
+      Debian 10: 'less'
 
 ROLES
 
@@ -118,7 +118,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
