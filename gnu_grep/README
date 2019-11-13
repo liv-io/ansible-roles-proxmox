@@ -67,7 +67,7 @@ PACKAGES
   gnu-grep
     Version: >= 2.6
     Name   :
-      Debian 9: 'grep'
+      Debian 10: 'grep'
 
 ROLES
 
@@ -109,7 +109,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
