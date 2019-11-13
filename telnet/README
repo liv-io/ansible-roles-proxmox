@@ -74,7 +74,7 @@ PACKAGES
   telnet
     Version: >= 0.10
     Name   :
-      Debian 9: 'telnet'
+      Debian 10: 'telnet'
 
 ROLES
 
@@ -116,7 +116,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
