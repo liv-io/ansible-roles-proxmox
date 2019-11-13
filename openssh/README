@@ -397,7 +397,7 @@ ROLES
   openssh
     Version: >= 7.0
     Name   :
-      Debian 9: 'openssh-server'
+      Debian 10: 'openssh-server'
 
 PARAMETERS
 
@@ -437,7 +437,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
