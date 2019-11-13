@@ -38,3 +38,6 @@ NTP={% for item in systemd_timesyncd_server %}{{item}}{% if not loop.last %} {% 
 FallbackNTP={% for item in systemd_timesyncd_fallback %}{{item}}{% if not loop.last %} {% endif %}{% endfor %}
 
 {% endif %}
+#RootDistanceMaxSec=5
+#PollIntervalMinSec=32
+#PollIntervalMaxSec=2048
