@@ -69,7 +69,7 @@ PACKAGES
   gnu-awk
     Version: >= 4.1
     Name   :
-      Debian 9: 'gawk'
+      Debian 10: 'gawk'
 
 ROLES
 
@@ -111,7 +111,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
