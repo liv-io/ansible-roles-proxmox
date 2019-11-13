@@ -14,5 +14,9 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.2.0 (2019-11-13)
+C: Add support for Debian 10
+C: Drop support for Debian 9
+
 * Version 0.1.0 (2019-07-29)
 F: Initial release
