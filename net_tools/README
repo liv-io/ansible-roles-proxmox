@@ -75,7 +75,7 @@ PACKAGES
   net-tools
     Version: >= 1.0
     Name   :
-      Debian 9: 'net-tools'
+      Debian 10: 'net-tools'
 
 ROLES
 
@@ -117,7 +117,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
