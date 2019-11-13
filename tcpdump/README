@@ -76,7 +76,7 @@ PACKAGES
   tcpdump
     Version: >= 4.0
     Name   :
-      Debian 9: 'tcpdump'
+      Debian 10: 'tcpdump'
 
 ROLES
 
@@ -118,7 +118,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
