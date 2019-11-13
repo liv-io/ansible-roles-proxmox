@@ -484,7 +484,7 @@ PACKAGES
   monit
     Version: >= 5.2
     Name   :
-      Debian 9: 'monit'
+      Debian 10: 'monit'
 
 ROLES
 
@@ -526,7 +526,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
