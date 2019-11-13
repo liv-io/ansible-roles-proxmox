@@ -87,7 +87,7 @@ PACKAGES
   sysstat
     Version: >= 10.0
     Name   :
-      Debian 9: 'sysstat'
+      Debian 10: 'sysstat'
 
 ROLES
 
@@ -129,7 +129,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
