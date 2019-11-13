@@ -70,7 +70,7 @@ PACKAGES
   openvswitch-switch
     Version: >= 2.0
     Name   :
-      Debian 9: 'openvswitch-switch'
+      Debian 10: 'openvswitch-switch'
 
 ROLES
 
@@ -112,7 +112,7 @@ SUPPORT
 
 OPERATING SYSTEMS
   Debian
-    Version: 9
+    Version: 10
       Status: Testing
 
 --------------------------------------------------------------------------------
