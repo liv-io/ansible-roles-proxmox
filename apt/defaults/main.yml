@@ -21,25 +21,25 @@ apt_config_all:
       - url: 'http://ftp.ch.debian.org/debian'
         state: 'true'
         comment: 'Debian - Base'
-        distribution: 'stretch'
+        distribution: 'buster'
         components: ['main', 'contrib']
 
       - url: 'http://ftp.ch.debian.org/debian'
         state: 'true'
         comment: 'Debian - Updates'
-        distribution: 'stretch-updates'
+        distribution: 'buster-updates'
         components: ['main', 'contrib']
 
       - url: 'http://security.debian.org'
         state: 'true'
         comment: 'Debian - Security'
-        distribution: 'stretch/updates'
+        distribution: 'buster/updates'
         components: ['main', 'contrib']
 
       - url: 'http://download.proxmox.com/debian/pve'
         state: 'true'
         comment: 'Proxmox - Community'
-        distribution: 'stretch'
+        distribution: 'buster'
         components: ['pve-no-subscription']
 
   - path: '/etc/apt/sources.list.d/pve-enterprise.list'
@@ -48,7 +48,7 @@ apt_config_all:
       - url: 'https://enterprise.proxmox.com/debian/pve'
         state: 'false'
         comment: 'Proxmox - Enterprise'
-        distribution: 'stretch'
+        distribution: 'buster'
         components: ['pve-enterprise']
 
 apt_config_group: []
