@@ -19,8 +19,8 @@ and protocols (e.g. NetFlow, IPFIX, sFlow, SPAN, RSPAN, CLI, LACP, 802.1ag).
 In addition, it is designed to support distribution across multiple physical
 servers similar to VMware's vNetwork distributed vswitch or Cisco's Nexus 1000V 
 
-For more detailed information on the usage and available configuration options
-please consult the following sections.
+For more information on the usage and available configuration options,
+consult the following sections.
 
 --------------------------------------------------------------------------------
 USAGE

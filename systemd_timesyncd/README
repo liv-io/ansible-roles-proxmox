@@ -18,8 +18,8 @@ time to disk every time the clock has been synchronized and uses this to
 possibly advance the system realtime clock on subsequent reboots to ensure it
 monotonically advances even if the system lacks a battery-buffered RTC chip.
 
-For more detailed information on the usage and available configuration options
-please consult the following sections.
+For more information on the usage and available configuration options,
+consult the following sections.
 
 --------------------------------------------------------------------------------
 USAGE
