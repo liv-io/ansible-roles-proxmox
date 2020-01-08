@@ -16,11 +16,11 @@
 #-------------------------------------------------------------------------------
 
 # HTTP Proxy
-{% if (apt_http_proxy|default('')) %}
+{% if not ((apt_http_proxy|default('')) == '') %}
 Acquire::http::proxy "{{apt_http_proxy}}";
 {% endif %}
 
 # HTTPS Proxy
-{% if (apt_https_proxy|default('')) %}
+{% if not ((apt_https_proxy|default('')) == '') %}
 Acquire::https::proxy "{{apt_https_proxy}}";
 {% endif %}
