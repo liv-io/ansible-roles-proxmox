@@ -14,6 +14,9 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.3.1 (2020-02-24)
+E: Use Ansible module copy instead of template for static moduli file
+
 * Version 0.3.0 (2019-11-13)
 C: Add support for Debian 10
 C: Drop support for Debian 9
