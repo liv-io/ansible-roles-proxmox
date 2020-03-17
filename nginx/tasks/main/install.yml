@@ -1,0 +1,63 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_major_version}}.yml"
+      - 'vars/main.yml'
+      errors: 'ignore'
+  tags:
+    - install
+    - nginx
+
+#-------------------------------------------------------------------------------
+# PACKAGING
+#-------------------------------------------------------------------------------
+
+- name: 'package install nginx'
+  package:
+    state: 'present'
+    name: "{{package_name_nginx}}"
+  tags:
+    - install
+    - nginx
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+- name: 'file create vhosts.d'
+  file:
+    state: 'directory'
+    path: "{{file_dst_vhosts_d}}"
+    mode: "{{file_mode_vhosts_d}}"
+    owner: "{{file_owner_vhosts_d}}"
+    group: "{{file_group_vhosts_d}}"
+  tags:
+    - install
+    - nginx
+
+- name: 'stat file dhparam.pem'
+  stat:
+    path: "{{file_dst_dhparam_pem}}"
+  register: register_dhparam_pem
+  tags:
+    - install
+    - nginx
+
+#-------------------------------------------------------------------------------
+# COMMANDS
+#-------------------------------------------------------------------------------
+
+- name: 'command generate dhparam'
+  shell: "{{command_cmd_generate_dhparam}}"
+  check_mode: 'no'
+  when: (register_dhparam_pem.stat.exists == False)
+  tags:
+    - install
+    - nginx

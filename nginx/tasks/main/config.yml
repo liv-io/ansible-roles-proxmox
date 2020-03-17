@@ -1,0 +1,49 @@
+---
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+#-------------------------------------------------------------------------------
+
+- name: 'include variables'
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+      - "vars/{{ansible_distribution_major_version}}.yml"
+      - 'vars/main.yml'
+      errors: 'ignore'
+  tags:
+    - config
+    - nginx
+
+#-------------------------------------------------------------------------------
+# FILES
+#-------------------------------------------------------------------------------
+
+- name: 'file create config'
+  template:
+    src: "{{file_src_config}}"
+    dest: "{{file_dst_vhosts_d}}/{{item.name}}-{{(item.port|int)}}.conf"
+    mode: "{{file_mode_config}}"
+    owner: "{{file_owner_config}}"
+    group: "{{file_group_config}}"
+  with_items: "{{nginx_config}}"
+  notify:
+    - 'command check nginx'
+    - 'service reload nginx'
+  when: not (item.state is match('false|no|remove'))
+  tags:
+    - config
+    - nginx
+
+- name: 'file remove config'
+  file:
+    state: 'absent'
+    path: "{{file_dst_vhosts_d}}/{{item.name}}-{{(item.port|int)}}.conf"
+  with_items: "{{nginx_config}}"
+  notify:
+    - 'command check nginx'
+    - 'service reload nginx'
+  when: (item.state is match('false|no|remove'))
+  tags:
+    - config
+    - nginx
