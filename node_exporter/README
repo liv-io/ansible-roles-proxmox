@@ -121,7 +121,6 @@ PACKAGES
   node_exporter
 
 ROLES
-  common
 
 PARAMETERS
 
@@ -162,7 +161,7 @@ SUPPORT
 OPERATING SYSTEMS
   Debian
     Version: 10
-      Status: Testing
+      Status: Stable
 
 --------------------------------------------------------------------------------
 OTHER
