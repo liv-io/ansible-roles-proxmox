@@ -29,10 +29,10 @@
     - remove
     - apt
 
-- name: 'file remove apt_script.dir'
+- name: 'file remove apt_check-update'
   file:
     state: 'absent'
-    path: "{{file_dst_apt_script_dir}}"
+    path: "{{file_dst_apt_check_update}}"
   tags:
     - remove
     - apt

@@ -42,24 +42,24 @@
     - install
     - apt
 
-- name: 'file create apt_script.dir'
+- name: 'file create local_sbin.dir'
   file:
     state: 'directory'
-    path: "{{file_dst_apt_script_dir}}"
-    mode: "{{file_mode_apt_script_dir}}"
-    owner: "{{file_owner_apt_script_dir}}"
-    group: "{{file_group_apt_script_dir}}"
+    path: "{{file_dst_local_sbin_dir}}"
+    mode: "{{file_mode_local_sbin_dir}}"
+    owner: "{{file_owner_local_sbin_dir}}"
+    group: "{{file_group_local_sbin_dir}}"
   tags:
     - install
     - apt
 
-- name: 'file create apt_check-update.sh'
+- name: 'file create apt_check-update'
   template:
-    src: "{{file_src_apt_check_update_sh}}"
-    dest: "{{file_dst_apt_check_update_sh}}"
-    mode: "{{file_mode_apt_check_update_sh}}"
-    owner: "{{file_owner_apt_check_update_sh}}"
-    group: "{{file_group_apt_check_update_sh}}"
+    src: "{{file_src_apt_check_update}}"
+    dest: "{{file_dst_apt_check_update}}"
+    mode: "{{file_mode_apt_check_update}}"
+    owner: "{{file_owner_apt_check_update}}"
+    group: "{{file_group_apt_check_update}}"
   tags:
     - install
     - apt

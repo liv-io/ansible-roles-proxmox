@@ -24,18 +24,18 @@ file_mode_apt_conf: '0644'
 file_owner_apt_conf: 'root'
 file_group_apt_conf: 'root'
 
-# apt_script.dir
-file_dst_apt_script_dir: "/{{common_script_dir}}/apt"
-file_mode_apt_script_dir: '0755'
-file_owner_apt_script_dir: 'root'
-file_group_apt_script_dir: 'root'
+# local_sbin.dir
+file_dst_local_sbin_dir: "/usr/local/sbin"
+file_mode_local_sbin_dir: '0755'
+file_owner_local_sbin_dir: 'root'
+file_group_local_sbin_dir: 'root'
 
-# apt_check-update.sh
-file_src_apt_check_update_sh: 'templates/main/apt_check-update.sh.j2'
-file_dst_apt_check_update_sh: "/{{common_script_dir}}/apt/apt_check-update.sh"
-file_mode_apt_check_update_sh: '0754'
-file_owner_apt_check_update_sh: 'root'
-file_group_apt_check_update_sh: 'root'
+# apt_check-update
+file_src_apt_check_update: 'templates/main/apt_check-update.j2'
+file_dst_apt_check_update: "/usr/local/sbin/apt_check-update"
+file_mode_apt_check_update: '0754'
+file_owner_apt_check_update: 'root'
+file_group_apt_check_update: 'root'
 
 # apt_check-update
 cron_name_apt_check_update: 'apt: Check Update'
@@ -45,5 +45,5 @@ cron_hour_apt_check_update: "{{apt_check_update_hour}}"
 cron_minute_apt_check_update: "{{apt_check_update_minute}}"
 cron_month_apt_check_update: "{{apt_check_update_month}}"
 cron_weekday_apt_check_update: "{{apt_check_update_weekday}}"
-cron_user_apt_check_update: "{{file_owner_apt_check_update_sh}}"
-cron_job_apt_check_update: "{{file_dst_apt_check_update_sh}}"
+cron_user_apt_check_update: "{{file_owner_apt_check_update}}"
+cron_job_apt_check_update: "{{file_dst_apt_check_update}}"

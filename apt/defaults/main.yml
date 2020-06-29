@@ -67,4 +67,4 @@ apt_monitor_mail_state: 'false'
 
 apt_monitor_prom_state: 'false'
 
-apt_monitor_prom_textfile_collector: "/{{common_data_dir}}/node_exporter/textfile_collector"
+apt_monitor_prom_textfile_collector: '/data/node_exporter/textfile_collector'
