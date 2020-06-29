@@ -14,6 +14,9 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 1.1.0 (2020-06-29)
+C: Update 'node_exporter' to version '1.0.1'
+
 * Version 1.0.0 (2020-06-29)
 C: Redesign role to support SELinux
 
