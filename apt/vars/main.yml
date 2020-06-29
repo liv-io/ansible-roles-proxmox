@@ -25,14 +25,14 @@ file_owner_apt_conf: 'root'
 file_group_apt_conf: 'root'
 
 # local_sbin.dir
-file_dst_local_sbin_dir: "/usr/local/sbin"
+file_dst_local_sbin_dir: '/usr/local/sbin'
 file_mode_local_sbin_dir: '0755'
 file_owner_local_sbin_dir: 'root'
 file_group_local_sbin_dir: 'root'
 
 # apt_check-update
 file_src_apt_check_update: 'templates/main/apt_check-update.j2'
-file_dst_apt_check_update: "/usr/local/sbin/apt_check-update"
+file_dst_apt_check_update: '/usr/local/sbin/apt_check-update'
 file_mode_apt_check_update: '0754'
 file_owner_apt_check_update: 'root'
 file_group_apt_check_update: 'root'
