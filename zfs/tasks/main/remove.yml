@@ -39,10 +39,18 @@
     - remove
     - zfs
 
-- name: 'file remove zfs_script.dir'
+- name: 'file remove zfs_check-pools'
   file:
     state: 'absent'
-    path: "{{file_dst_zfs_script_dir}}"
+    path: "{{file_dst_zfs_check_pools}}"
+  tags:
+    - remove
+    - zfs
+
+- name: 'file remove zfs_scrub-pools'
+  file:
+    state: 'absent'
+    path: "{{file_src_zfs_scrub_pools}}"
   tags:
     - remove
     - zfs
