@@ -19,17 +19,6 @@
 # FILES
 #-------------------------------------------------------------------------------
 
-- name: 'file create local_sbin.dir'
-  file:
-    state: 'directory'
-    path: "{{file_dst_local_sbin_dir}}"
-    mode: "{{file_mode_local_sbin_dir}}"
-    owner: "{{file_owner_local_sbin_dir}}"
-    group: "{{file_group_local_sbin_dir}}"
-  tags:
-    - install
-    - zfs
-
 - name: 'file create zfs_check-pools'
   template:
     src: "{{file_src_zfs_check_pools}}"
