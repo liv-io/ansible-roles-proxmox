@@ -14,6 +14,10 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 2.1.0 (2020-07-24)
+F: Add script 'zfs_trim-pools' to trim ZFS pools
+B: Add missing cron file name for 'zfs_check-pools' and 'zfs_scrub-pools' scripts
+
 * Version 2.0.0 (2020-07-03)
 C: Remove option 'zfs_check_pools_interval'
 C: Add option 'zfs_check_pools_minute' to specify interval (Default: '*/15')
