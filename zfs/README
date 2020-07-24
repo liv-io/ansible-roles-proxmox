@@ -218,7 +218,7 @@ ROLE
     Required   : False
     Value      : Arbitrary
     Type       : Integer, String
-    Default    : 1
+    Default    : '1'
     Options    :
       Examples: '5' | '*/6'
 
@@ -248,7 +248,7 @@ ROLE
     Required   : False
     Value      : Arbitrary
     Type       : Integer, String
-    Default    : 5
+    Default    : '5'
     Options    :
       Examples: '6' | 'Saturday'
 
@@ -291,7 +291,7 @@ ROLE
     Required   : False
     Value      : Arbitrary
     Type       : Integer, String
-    Default    : 6
+    Default    : '6'
     Options    :
       Examples: '5' | '*/6'
 
@@ -321,7 +321,7 @@ ROLE
     Required   : False
     Value      : Arbitrary
     Type       : Integer, String
-    Default    : 5
+    Default    : '5'
     Options    :
       Examples: '6' | 'Saturday'
 
