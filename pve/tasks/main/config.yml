@@ -25,7 +25,7 @@
   changed_when: (register_create_group.rc == 255)
   failed_when: (register_create_group.rc > 0) and (register_create_group.rc < 255)
   check_mode: 'no'
-  with_items: "{{pve_group_config_all + pve_group_config_group + pve_group_config_host}}"
+  loop: "{{pve_group_config_all + pve_group_config_group + pve_group_config_host}}"
   when: not ((item.state|default('true')) is match('false|no|remove'))
   tags:
     - config
@@ -37,7 +37,7 @@
   changed_when: (register_create_user.rc == 255)
   failed_when: (register_create_user.rc > 0) and (register_create_user.rc < 255)
   check_mode: 'no'
-  with_items: "{{pve_user_config_all + pve_user_config_group + pve_user_config_host}}"
+  loop: "{{pve_user_config_all + pve_user_config_group + pve_user_config_host}}"
   when: not ((item.state|default('true')) is match('false|no|remove'))
   tags:
     - config
@@ -48,7 +48,7 @@
   register: register_create_acl
   changed_when: (register_create_acl.rc > 0)
   check_mode: 'no'
-  with_items: "{{pve_acl_config_all + pve_acl_config_group + pve_acl_config_host}}"
+  loop: "{{pve_acl_config_all + pve_acl_config_group + pve_acl_config_host}}"
   when: not ((item.state|default('true')) is match('false|no|remove'))
   tags:
     - config
@@ -60,7 +60,7 @@
   changed_when: (register_remove_group.rc == 255)
   failed_when: (register_remove_group.rc > 0) and (register_remove_group.rc < 255)
   check_mode: 'no'
-  with_items: "{{pve_group_config_all + pve_group_config_group + pve_group_config_host}}"
+  loop: "{{pve_group_config_all + pve_group_config_group + pve_group_config_host}}"
   when: ((item.state|default('true')) is match('false|no|remove'))
   tags:
     - config
@@ -72,7 +72,7 @@
   changed_when: (register_remove_user.rc == 255)
   failed_when: (register_remove_user.rc > 0) and (register_remove_user.rc < 255)
   check_mode: 'no'
-  with_items: "{{pve_user_config_all + pve_user_config_group + pve_user_config_host}}"
+  loop: "{{pve_user_config_all + pve_user_config_group + pve_user_config_host}}"
   when: ((item.state|default('true')) is match('false|no|remove'))
   tags:
     - config
