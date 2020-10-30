@@ -14,6 +14,9 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 2.1.1 (2020-10-30)
+E: Simplify Ansible file header (ansible_managed)
+
 * Version 2.1.0 (2020-07-24)
 F: Add script 'zfs_trim-pools' to trim ZFS pools
 B: Add missing cron file name for 'zfs_check-pools' and 'zfs_scrub-pools' scripts
