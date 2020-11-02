@@ -12,7 +12,7 @@ package_name_hddtemp: 'hddtemp'
 #-------------------------------------------------------------------------------
 
 # hddtemp
-file_src_hddtemp: 'templates/main/hddtemp.j2'
+file_src_hddtemp: 'templates/main/hddtemp'
 file_dst_hddtemp: '/etc/default/hddtemp'
 file_mode_hddtemp: '0644'
 file_owner_hddtemp: 'root'

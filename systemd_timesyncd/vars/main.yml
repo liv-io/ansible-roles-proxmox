@@ -5,7 +5,7 @@
 #-------------------------------------------------------------------------------
 
 # timesyncd.conf
-file_src_timesyncd_conf: 'templates/main/timesyncd.conf.j2'
+file_src_timesyncd_conf: 'templates/main/timesyncd.conf'
 file_dst_timesyncd_conf: '/etc/systemd/timesyncd.conf'
 file_mode_timesyncd_conf: '0644'
 file_owner_timesyncd_conf: 'root'
