@@ -14,6 +14,9 @@ F: feature
 
 --------------------------------------------------------------------------------
 
+* Version 0.5.0 (2020-11-26)
+F: Add support for Monit service monitoring (auditd_monitor_monit_state)
+
 * Version 0.4.1 (2020-10-30)
 E: Simplify Ansible file header (ansible_managed)
 
