@@ -26,7 +26,7 @@
 
 ## About
 
-ansible-roles-proxmox is a collection of well curated Ansible roles for the Debian Linux distribution. The Ansible roles are licensed under the Simplified BSD License.
+`ansible-roles-proxmox` is a collection of well curated Ansible roles for the Debian Linux distribution. The Ansible roles are licensed under the Simplified BSD License.
 
 ### Features
 
