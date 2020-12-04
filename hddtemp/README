@@ -65,7 +65,7 @@ PARAMETERS
 ROLE
   hddtemp_state
     Description: Control the state of the role.
-    Implemented: 0.1
+    Implemented: 0.1.0
     Required   : False
     Value      : Predetermined
     Type       : String
@@ -79,7 +79,7 @@ ROLE
 
   hddtemp_daemonize
     Description: Control the 'hddtemp_daemonize' option.
-    Implemented: 0.1
+    Implemented: 0.1.0
     Required   : False
     Value      : Predetermined
     Type       : String
@@ -90,7 +90,7 @@ ROLE
 
   hddtemp_monitor_monit_state
     Description: Control the 'hddtemp_monitor_monit_state' option.
-    Implemented: 0.2
+    Implemented: 0.2.0
     Required   : False
     Value      : Predetermined
     Type       : String
