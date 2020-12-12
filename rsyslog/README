@@ -176,7 +176,7 @@ PACKAGES
   rsyslog
     Version: >= 8.0
     Name   :
-      CentOS 8: 'rsyslog'
+      Debian 10: 'rsyslog'
 
 ROLES
 
