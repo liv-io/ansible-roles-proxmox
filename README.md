@@ -9,6 +9,7 @@
 
 ## Index
 
+* [Announcement](#announcement)
 * [About](#about)
   * [Features](#features)
   * [Support](#support)
@@ -23,6 +24,12 @@
 * [Contact](#contact)
 * [Credits](#credits)
 * [Appendix](#appendix)
+
+## Announcement
+
+Since migrating all Ansible roles from [CentOS](https://github.com/liv-io/ansible-roles-centos) to Debian [Debian](https://github.com/liv-io/ansible-roles-debian), Proxmox can utilize the same roles. This repository therefore became obsolete.
+
+Please find the Debian Ansible roles [here](https://github.com/liv-io/ansible-roles-debian).
 
 ## About
 
